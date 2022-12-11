@@ -1,0 +1,66 @@
+<!-- Konrad Dzioba 3K --!>
+zadanie 13a
+
+Dany jest trójkąt prostokątny. Wczytać przeciwprostokątną c_dzi , oraz przeciwprostokątną b_dzi.
+Wykonać wypisać wczytane dane dwa miejsca po przecinku z jednostką cm. Wielkość 13mm kolor fioletowy
+
+
+Obliczyć przeciwprostokątną (2 miejsca po przecinku jednostka)
+
+
+Obliczyć Obwód z jednostką
+
+Obliczyć pole z jednostką
+
+Obliczyć wysokości z jednostkami
+
+Kąty trójkąa wrażone w stopniach
+
+Wszystkie funkcje trygonometryczne(3 miejsca po przecinku)
+
+Użyj modułu .MatH -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Zadanie 13a</title>
+</head>
+<body>
+<div style="color:purple;font-size:13mm;">
+    <script language="JavaScript">
+    var przeciwprostokątna_c=prompt("c=","");
+    var przyprostokątna_b=prompt("b=","");
+    var c_dzi=parseFloat(przeciwprostokątna_c);
+    var b_dzi=parseFloat(przyprostokątna_b);
+    var a_dzi=Math.sqrt(Math.pow(c_dzi,2)-Math.pow(b_dzi,2));
+    document.write("c="+c_dzi.toFixed(2)+"cm"+"<br>");
+    document.write("b="+b_dzi.toFixed(2)+"cm"+"<br>");
+    document.write("a="+a_dzi.toFixed(2)+"cm"+"<br>");
+    var h1=a_dzi;
+    var h2=b_dzi;
+    var h3=(a_dzi*b_dzi)/c_dzi;
+    document.write("h1="+h1.toFixed(2)+"cm"+"<br>");
+    document.write("h2="+h2.toFixed(2)+"cm"+"<br>");
+    document.write("h3="+h3.toFixed(2)+"cm"+"<br>");
+    var sin_alfa=a_dzi/c_dzi;
+    var cos_alfa=b_dzi/c_dzi;
+    var tangens_alfa = a_dzi/b_dzi;
+    var cotangens_alfa = b_dzi/a_dzi;
+    document.write("sin alfa="+sin_alfa.toFixed(3)+"<br>");
+    document.write("cos alfa="+cos_alfa.toFixed(3)+"<br>");
+    document.write("tg alfa="+tangens_alfa.toFixed(3)+"<br>");
+    document.write("ctg alfa="+cotangens_alfa.toFixed(3)+"<br>");
+    var beta=Math.asin(b_dzi/c_dzi)*(180/Math.PI);
+    var alfa=90-beta;
+    document.write("alfa="+alfa.toFixed(3)+"st"+"<br>");
+    document.write("beta="+beta.toFixed(3)+"st"+"<br>");
+    var obwod=a_dzi+b_dzi+c_dzi;
+    document.write("obwod="+obwod.toFixed(2)+"cm"+"<br>");
+    var pole=b_dzi*a_dzi/2;
+    document.write("pole="+pole.toFixed(2)+"cm"+"<br>");
+    </script>
+</div>
+</body>
+</html>
